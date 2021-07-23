@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="userpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="placement.Controllers.UserController">
+   <left>
+      <Pane fx:id="leftpane" onMouseClicked="#leftpaneMouseclick" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #583bcd; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="infoPage" layoutX="55.0" layoutY="332.0" onMouseClicked="#redirectToInfo" text="Update info" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="profilenamelabel" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="152.0" prefHeight="30.0" prefWidth="195.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </Label>
+            <JFXToggleButton layoutX="14.0" layoutY="566.0" text="Enable SSH" textFill="WHITE" />
+            <JFXButton fx:id="viewposts" layoutX="57.0" layoutY="381.0" onMouseClicked="#renderView" text="View posts" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="applySelected" layoutX="45.0" layoutY="429.0" onMouseClicked="#applySelectedJobs" text="Apply selected" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="profilePicture" fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pfp.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></Pane>
+   </left>
+   <center>
+      <AnchorPane fx:id="parentmiddle" minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="866.0" style="-fx-background-color: #2d2f33;" />
+   </center>
+   <right>
+      <Pane fx:id="rightpane" onMouseClicked="#rightpaneMouseclick" prefHeight="678.0" prefWidth="270.0" style="-fx-background-color: #2d2f33;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </right>
+   <bottom>
+      <Pane prefHeight="42.0" prefWidth="1280.0" style="-fx-background-color: #27282c;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="sqlQueryLabel" alignment="CENTER" layoutX="419.0" layoutY="11.0" prefHeight="17.0" prefWidth="442.0" text="SQL&gt;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="logoutButton" layoutX="1198.0" layoutY="6.0" onAction="#logoutUser" style="-fx-background-color: #583bcd;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="15.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+   </bottom>
+   <top>
+      <HBox prefHeight="0.0" prefWidth="1280.0" style="-fx-background-color: #27282c;" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

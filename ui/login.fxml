@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<!--suppress ALL -->
+
+<Pane fx:id="loginpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #27282c;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="placement.Controllers.LoginController">
+   <children>
+      <JFXRadioButton fx:id="toggleStudent" layoutX="1011.0" layoutY="440.0" text="Student" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="20.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="toggleAdmin" layoutX="1011.0" layoutY="285.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="20.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="toggleCompany" layoutX="1011.0" layoutY="355.0" text="Company" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="20.0" />
+         </font>
+      </JFXRadioButton>
+      <Button fx:id="submit" cacheShape="false" centerShape="false" layoutX="571.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#handleSubmit" scaleShape="false" style="-fx-background-color: #583bcd;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Bloom threshold="1.0" />
+         </effect>
+      </Button>
+      <Label layoutX="531.0" layoutY="40.0" text="Login" textFill="#583bcd">
+         <font>
+            <Font name="Leelawadee UI Bold" size="56.0" />
+         </font>
+      </Label>
+      <Label layoutX="504.0" layoutY="300.0" text="UserID:" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="461.0" layoutY="385.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="userID" focusColor="#583bcd" layoutX="617.0" layoutY="308.0" promptText="Enter your user id" style="-fx-text-fill: white;">
+         <tooltip>
+            <Tooltip text="Enter an id" />
+         </tooltip></JFXTextField>
+      <JFXPasswordField fx:id="passwordID" focusColor="#583bcd" layoutX="617.0" layoutY="393.0" promptText="Enter a Password" style="-fx-text-fill: white;" />
+      <JFXCheckBox layoutX="545.0" layoutY="476.0" text="Remember me" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <Button fx:id="registerButton" cacheShape="false" centerShape="false" layoutX="566.0" layoutY="616.0" mnemonicParsing="false" onAction="#redirectRegister" onMouseClicked="#handleSubmit" scaleShape="false" style="-fx-background-color: #583bcd;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Bloom threshold="1.0" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="94.0" fitWidth="89.0" layoutX="142.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </ImageView>
+      <Circle fill="#1f93ff00" layoutX="187.0" layoutY="365.0" radius="48.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" />
+   </children>
+</Pane>

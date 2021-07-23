@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="placement.Controllers.UserTableComponentController">
+   <children>
+      <JFXTreeTableView fx:id="viewTable" prefHeight="542.0" prefWidth="680.0" scaleShape="false" style="-fx-text-fill: white; -fx-prompt-text-fill: white; -fx-background-color: #27282c; -fx-border-color: white; -fx-alignment: Center;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="68.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+   </children>
+</AnchorPane>

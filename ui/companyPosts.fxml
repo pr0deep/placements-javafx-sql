@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXChipView?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="companyPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2d2f33;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="placement.Controllers.PostController">
+   <center>
+      <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="663.0" prefWidth="975.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="56.0" layoutY="22.0" prefHeight="533.0" prefWidth="802.0">
+               <children>
+                  <JFXDatePicker fx:id="deadlineLabel" defaultColor="#583bcd" layoutX="74.0" layoutY="467.0" prefHeight="28.0" prefWidth="158.0" promptText="Application deadline" style="-fx-text-fill: white; -fx-background-color: white; -fx-background-insets: -10px; -fx-prompt-text-fill: white;" />
+                  <JFXButton fx:id="postButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="644.0" layoutY="472.0" onAction="#postOffer" onMouseClicked="#postJob" prefHeight="45.0" prefWidth="145.0" style="-fx-background-color: #583bcd;" text="Create Post" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="44.0" prefHeight="67.0" prefWidth="218.0" text="Post New Offer" textFill="#583bcd">
+                     <font>
+                        <Font name="Leelawadee UI" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="titleLabel" focusColor="#583bcd" layoutX="74.0" layoutY="101.0" prefHeight="30.0" prefWidth="247.0" promptText="Title" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="descLabel" focusColor="#583bcd" layoutX="74.0" layoutY="177.0" prefHeight="114.0" prefWidth="714.0" promptText="Job Description" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Leelawadee UI" size="16.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXTextField fx:id="salaryLabel" focusColor="#583bcd" layoutX="74.0" layoutY="366.0" prefHeight="30.0" prefWidth="247.0" promptText="Salary" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXChipView fx:id="skillsLabel" layoutX="451.0" layoutY="353.0" maxWidth="500.0" minWidth="300.0" prefHeight="112.0" prefWidth="300.0" promptText="Skills" style="-fx-text-fill: white; -fx-prompt-text-fill: white; -fx-font-family: consolas; -fx-font-size: 16;" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="563.0" prefWidth="270.0" style="-fx-border-color: grey; -fx-background-color: #27282c;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="134.0" layoutY="155.0" />
+            <Label fx:id="nameLabel" alignment="CENTER" layoutX="36.0" layoutY="88.0" prefHeight="67.0" prefWidth="218.0" text="Company X" textFill="#583bcd">
+               <font>
+                  <Font name="Consolas Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="idLabel" alignment="CENTER" layoutX="34.0" layoutY="190.0" prefHeight="30.0" prefWidth="218.0" text="Id : xnx5321" textFill="#afafaf">
+               <font>
+                  <Font name="Consolas" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="CENTER" layoutX="92.0" layoutY="406.0" prefHeight="44.0" prefWidth="107.0" ripplerFill="BLACK" style="-fx-background-color: #583bcd;" text="Post" textFill="WHITE" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="423.0">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="applicationsButton" alignment="CENTER" layoutX="52.0" layoutY="492.0" onMouseClicked="#redirectToApplications" prefHeight="72.0" prefWidth="187.0" ripplerFill="BLACK" style="-fx-background-color: #583bcd;" text="Applications" textFill="WHITE" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="502.0">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></AnchorPane>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="49.0" prefWidth="1280.0" style="-fx-background-color: #27282c;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="272.0" layoutY="12.0" prefHeight="54.0" prefWidth="789.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="logoutButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="1169.0" layoutY="13.0" onAction="#logoutCompany" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #1f1e1e; -fx-border-color: #583bcd;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

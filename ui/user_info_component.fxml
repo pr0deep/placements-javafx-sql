@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="parentmiddle" minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="866.0" style="-fx-background-color: #2d2f33;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="placement.Controllers.UserInfoComponentController">
+   <children>
+      <JFXTextField fx:id="nameLabel" alignment="CENTER" layoutX="398.0" layoutY="56.0" prefHeight="46.0" prefWidth="211.0" style="-fx-text-fill: white; -fx-prompt-text-fill: white;">
+         <font>
+            <Font name="Leelawadee UI" size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="emailLabel" alignment="CENTER" layoutX="429.0" layoutY="147.0" prefHeight="46.0" prefWidth="150.0" style="-fx-text-fill: white; -fx-prompt-text-fill: white;">
+         <font>
+            <Font name="Leelawadee UI" size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="phoneLabel" alignment="CENTER" layoutX="424.0" layoutY="241.0" prefHeight="46.0" prefWidth="159.0" style="-fx-text-fill: white; -fx-prompt-text-fill: white;">
+         <font>
+            <Font name="Leelawadee UI" size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="passwordLabel" alignment="CENTER" layoutX="398.0" layoutY="332.0" prefHeight="46.0" prefWidth="211.0" style="-fx-text-fill: white; -fx-prompt-text-fill: white;">
+         <font>
+            <Font name="Leelawadee UI" size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="skillsLabel" alignment="CENTER" editable="false" layoutX="317.0" layoutY="423.0" prefHeight="46.0" prefWidth="374.0" style="-fx-text-fill: white; -fx-prompt-text-fill: white;">
+         <font>
+            <Font name="Leelawadee UI" size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="saveChangesButton" defaultButton="true" layoutX="446.0" layoutY="549.0" onMouseClicked="#saveChanges" prefHeight="37.0" prefWidth="126.0" ripplerFill="#7b1af8" style="-fx-background-color: #27282c;" text="Save Changes" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
